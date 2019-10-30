@@ -1,0 +1,14 @@
+{% macro nav(title, icon = '') %}
+    <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+            <div class="navbar-wrapper">
+                <p class="navbar-brand">
+                    {% if icon is not empty %}
+                        {{ icon(icon, 'align-middle mr-3') }}
+                    {% endif %}
+                    <span>{{ title|trans }}</span>
+                </p>
+            </div>
+        </div>
+    </nav>
+{% endmacro %}

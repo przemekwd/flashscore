@@ -1,0 +1,9 @@
+{% macro list(leagues) %}
+    <div class="row">
+        {% if leagues %}
+            {% for league in leagues.data %}
+                {% include 'DashboardBundle:football/league:_listRow.html.twig' with { league: league } %}
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endmacro %}

@@ -1,0 +1,16 @@
+{% import 'AppBundle:nav:macro.html.twig' as nav %}
+{% import 'DashboardBundle:football/league:macro.html.twig' as league %}
+
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block main %}
+
+    {{ nav.nav('Football', 'sports_soccer') }}
+
+    <div class="content">
+        <div class="container-fluid">
+            {{ league.list(connector.league.searchBy({c: 'England'})) }}
+        </div>
+    </div>
+
+{% endblock %}
